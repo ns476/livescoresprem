@@ -1,0 +1,8 @@
+<queue-entries>
+<!--Set the max number of concurrent requests to 50-->
+  <queue>
+    <name>c2dm</name>
+    <rate>10/s</rate>
+    <bucket-size>5</bucket-size>
+  </queue>
+</queue-entries>

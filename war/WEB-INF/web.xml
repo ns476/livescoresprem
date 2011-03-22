@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>LiveScoresGAEServlet</servlet-name>
+		<servlet-class>in.skeh.LiveScoresGAE.LiveScoresGAEServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PremFixturesUpdateWatcher</servlet-name>
+		<servlet-class>in.skeh.LiveScoresGAE.PremFixturesUpdateWatcher</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PremLiveScoresUpdateWatcher</servlet-name>
+		<servlet-class>in.skeh.LiveScoresGAE.PremLiveScoresUpdateWatcher</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>in.skeh.LiveScoresGAE.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SendUpdateServlet</servlet-name>
+		<servlet-class>in.skeh.LiveScoresGAE.SendUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LiveScoresGAEServlet</servlet-name>
+		<url-pattern>/matches</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>PremFixturesUpdateWatcher</servlet-name>
+		<url-pattern>/update-fixtures</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>PremLiveScoresUpdateWatcher</servlet-name>
+		<url-pattern>/update-livescores</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SendUpdateServlet</servlet-name>
+		<url-pattern>/prem-worker</url-pattern>
+	</servlet-mapping>
+</web-app>

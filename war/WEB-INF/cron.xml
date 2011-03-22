@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+  <cron>
+    <url>/update-fixtures</url>
+    <description>Update fixtures from BBC Sport</description>
+    <schedule>every 1 hours</schedule>
+  </cron>
+  <cron>
+    <url>/update-livescores</url>
+    <description>Update live scores from BBC Sport</description>
+    <schedule>every 1 minutes</schedule>
+    <timezone>America/New_York</timezone>
+  </cron>
+</cronentries>
